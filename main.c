@@ -11,7 +11,7 @@ int main()
     file = fopen("Hakan.txt", "r+");
 
     char array[length], oneword[max_length], memory[length];
-    char space = ' ', virgul = ',', nokta = '.';
+    char space = ' ', comma = ',', dot = '.';
 
     int i = 0, j, count = 0, count2 = 0, count3 = 0, count4 = 0;
 
@@ -38,14 +38,14 @@ int main()
                 count4++;
         }
 
-        if(oneword[i] != space && oneword[i] != virgul && oneword[i] != nokta && count4 > count3 || count4 == count3)
+        if(oneword[i] != space && oneword[i] != comma && oneword[i] != dot && count4 > count3 || count4 == count3)
         {
             //printf("%c%c %d tane var. ", oneword[i], oneword[i + 1], count2);
             //printf("%c%c%c %d tane var. ", oneword[i], oneword[i + 1], oneword[i + 2], count3);
             printf("%c%c%c%c %d tane var. ", oneword[i], oneword[i + 1], oneword[i + 2], oneword[i + 3], count4);
         }
 
-        if(oneword[i] != space && oneword[i] != virgul && oneword[i] != nokta && count4 < count3)
+        if(oneword[i] != space && oneword[i] != comma && oneword[i] != dot && count4 < count3)
         {
             //printf("%c%c %d tane var. ", oneword[i], oneword[i + 1], count2);
             printf("%c%c%c %d tane var. ", oneword[i], oneword[i + 1], oneword[i + 2], count3);
