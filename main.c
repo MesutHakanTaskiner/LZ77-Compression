@@ -53,7 +53,8 @@ int main()
             strcat(ch, ch3);
             strcat(ch, ch4);
             strcat(memory, ch);
-            strcpy(prime_array[0].word_array, memory);
+            printf("   %s", memory);
+            //strcpy(prime_array[i].word_array, memory);
             //printf("\n%s\n", prime_array[0].word_array);
             i += 3;
         }
@@ -69,7 +70,8 @@ int main()
             strcat(memory, ch);
             strcat(memory, ch2);
             strcat(memory, ch3);
-            strcpy(prime_array[0].word_array, memory);
+            printf("   %s", memory);
+            //strcpy(prime_array[0].word_array, memory);
             //printf("\n%s\n", prime_array[0].word_array);
             i += 2;
         }
@@ -85,6 +87,4 @@ int main()
         count4 = 0;
         printf("\n");
     }
-
-
 }
