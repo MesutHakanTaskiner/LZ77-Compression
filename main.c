@@ -18,19 +18,13 @@ int main()
     while(!feof(file))
     {
         fscanf(file, "%c", &oneword[i]);
-        //printf("%c", oneword[i]);
         i++;
     }
-
-    //printf("\n\n\n");
 
     for(i = 0; i < strlen(oneword); i++)
     {
         for (j = 0; j < strlen(oneword); j++)
         {
-            //if(oneword[i] == oneword[j] && oneword[i + 1] == oneword[j + 1])
-             //   count2++;
-
             if(oneword[i] == oneword[j] && oneword[i + 1] == oneword[j + 1] && oneword[i + 2] == oneword[j + 2])
                 count3++;
 
@@ -38,18 +32,14 @@ int main()
                 count4++;
         }
 
-        if(oneword[i] != space && oneword[i] != comma && oneword[i] != dot && count4 > count3 || count4 == count3)
+        if(oneword[i] != space && oneword[i] != comma && oneword[i] != dot && count4 > count3 || count4 == count3 && count4 != 1)
         {
-            //printf("%c%c %d tane var. ", oneword[i], oneword[i + 1], count2);
-            //printf("%c%c%c %d tane var. ", oneword[i], oneword[i + 1], oneword[i + 2], count3);
             printf("%c%c%c%c %d tane var. ", oneword[i], oneword[i + 1], oneword[i + 2], oneword[i + 3], count4);
         }
 
-        if(oneword[i] != space && oneword[i] != comma && oneword[i] != dot && count4 < count3)
+        if(oneword[i] != space && oneword[i] != comma && oneword[i] != dot && count4 < count3 && count3 != 1)
         {
-            //printf("%c%c %d tane var. ", oneword[i], oneword[i + 1], count2);
             printf("%c%c%c %d tane var. ", oneword[i], oneword[i + 1], oneword[i + 2], count3);
-            //printf("%c%c%c%c %d tane var. ", oneword[i], oneword[i + 1], oneword[i + 2], oneword[i + 3], count4);
         }
 
         count2 = 0;
@@ -57,5 +47,4 @@ int main()
         count4 = 0;
         printf("\n");
     }
-
 }
